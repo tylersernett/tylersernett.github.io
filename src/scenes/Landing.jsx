@@ -14,7 +14,7 @@ const Landing = ({ setSelectedPage }) => {
             <div className="md:order-2 basis-3/5 z-10 mt-16 md:mt-32 flex justify-center">
                 {isAboveLargeScreens ? (
                     <div
-                        className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
+                        className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 before:rounded-t-[400px]
                         before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1]"
                     >
                         <img
@@ -51,7 +51,7 @@ const Landing = ({ setSelectedPage }) => {
                                 before:-top-[130px] before:z-[-1]'
                         >Johnson</span>
                     </p>
-                    <p className='mt-10 mb-7 text-sm text-center md:text-start'>
+                    <p className='mt-10 mb-7 text-center text-sm md:text-base md:text-start '>
                         Ipsum a arcu cursus vitae.
                         Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Lorem donec massa.
                     </p>
