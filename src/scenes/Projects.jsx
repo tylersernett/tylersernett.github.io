@@ -35,7 +35,7 @@ const Project = ({title}) => {
 
 const Projects = () => {
     return (
-        <section id="projects" className='pt-48 pb-48'>
+        <section id="projects" className='pt-32 pb-48'>
             {/* HEADING */}
             <motion.div
                 className='md:w-2/5 mx-auto text-center'
@@ -69,7 +69,7 @@ const Projects = () => {
                     className='sm:grid sm:grid-cols-3'
                     initial='hidden'
                     whileInView='visible'
-                    viewport={{ once: false, amount: 0.2 }} //bug: high amount will prevent project animations from firing on small screens
+                    viewport={{ once: true, amount: 0.2 }} //bug: high amount will prevent project animations from firing on small screens
                     variants={container}
                 >
                     <div className='flex justify-center text-center items-center p-10 bg-blue 
