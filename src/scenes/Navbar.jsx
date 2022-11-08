@@ -21,12 +21,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const navbarBackground = isTopOfPage? "" : "bg-red";
     
     return (
-        <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+        <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-3`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
                 <h4 className="font-playfair text-3xl font-bold">TSJ</h4>
                 {/* DESKTOP NAV */}
                 {isAboveSmallScreens ? (
-                    <div className='flex justify-between gap-16 font-opensans text-sm font-semibold'>
+                    <div className='flex justify-between gap-16 font-opensans text-sm md:text-base font-semibold'>
                         {/* TODO: cleanup -- make this component, keep DRY, useContext */}
                         <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
