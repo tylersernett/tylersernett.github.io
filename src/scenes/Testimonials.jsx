@@ -40,8 +40,8 @@ const Testimonials = () => {
                         visible: { opacity: 1, scale: 1 }
                     }}
                 >
-                    <p className="font-playfair text-6xl">"</p>
-                    <p className="text-center text-xl">Morbi quis commodo odio aenean.</p>
+                    <p className="font-playfair text-6xl">“</p>
+                    <p className="text-center text-xl">Morbi quis commodo odio aenean. Ac felis donec et odio pellentesque diam volutpat.</p>
                 </motion.div>
  
                 <motion.div
@@ -55,7 +55,7 @@ const Testimonials = () => {
                         visible: { opacity: 1, scale: 1 }
                     }}
                 >
-                    <p className="font-playfair text-6xl">"</p>
+                    <p className="font-playfair text-6xl">“</p>
                     <p className="text-center text-xl">Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque.</p>
                 </motion.div>
 
@@ -70,7 +70,7 @@ const Testimonials = () => {
                         visible: { opacity: 1, scale: 1 }
                     }}
                 >
-                    <p className="font-playfair text-6xl">"</p>
+                    <p className="font-playfair text-6xl">“</p>
                     <p className="text-center text-xl">Malesuada nunc vel risus commodo viverra maecenas accumsan. </p>
                 </motion.div>
             </div>
