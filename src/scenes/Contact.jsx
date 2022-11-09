@@ -16,7 +16,7 @@ const Contact = () => {
         }
     }
     return (
-        <section id="contact" className="py-48">
+        <section id="contact" className="py-32">
             {/* HEADINGS */}
             <motion.div
                 initial='hidden'
@@ -55,6 +55,83 @@ const Contact = () => {
                     <img src="../assets/contact-image.jpeg" alt='contact' />
                 </motion.div>
 
+                <motion.div
+                    className="basis-1/2 mt-10 md:mt-0"
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, y: 50 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                >
+                    <form
+                        target="_blank"
+                        onSubmit={onSubmit}
+                        action="https://formsubmit.co/EMAIL@gmail.com"
+                        method="POST">
+
+                        {/* NAME FIELD */}
+                        <input className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+                            type="text"
+                            placeholder="NAME"
+                            // for react hook form:
+                            {...register("name", {
+                                required: true,
+                                maxLength: 100,
+                            })}
+                        />
+                        {errors.name && (
+                            <p className="text-red mt-1">
+                                {errors.name.type === 'required' && 'This field is required.'}
+                                {errors.name.type === 'maxLength' && 'Max length is 100 characters.'}
+                            </p>
+                        )}
+
+                        {/* EMAIL FIELD */}
+                        <input className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                            type="text"
+                            placeholder="EMAIL"
+                            // for react hook form:
+                            {...register("email", {
+                                required: true,
+                                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            })}
+                        />
+                        {errors.email && (
+                            <p className="text-red mt-1">
+                                {errors.name.type === 'required' && 'This field is required.'}
+                                {errors.name.type === 'pattern' && 'Invalid email address.'}
+                            </p>
+                        )}
+
+                        {/* MESSAGE FIELD */}
+                        <textarea className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                            type="text"
+                            placeholder="MESSAGE"
+                            rows='4'
+                            cols='50'
+                            // for react hook form:
+                            {...register("message", {
+                                required: true,
+                                maxLength: 2000
+                            })}
+                        />
+                        {errors.message && (
+                            <p className="text-red mt-1">
+                                {errors.name.type === 'required' && 'This field is required.'}
+                                {errors.name.type === 'maxLength' && 'Max length is 2000 characters.'}
+                            </p>
+                        )}
+
+                        <button type="submit"
+                            className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
+                        hover:text-white transition duration-500">
+                            SEND ME A MESSAGE
+                        </button>
+                    </form>
+                </motion.div>
 
             </div>
         </section>
