@@ -9,6 +9,7 @@ import MySkills from "./scenes/MySkills";
 import Navbar from "./scenes/Navbar";
 import Projects from "./scenes/Projects";
 import Testimonials from "./scenes/Testimonials";
+import { motion } from "framer-motion";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
@@ -17,7 +18,10 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) setIsTopOfPage(true);
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage("home");
+      }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     }
     window.addEventListener("scroll", handleScroll);
@@ -32,27 +36,37 @@ function App() {
         {isAboveMediumScreens && (
           <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
-        <Landing setSelectedPage={setSelectedPage} />
+        <motion.div whileInView={() => setSelectedPage("home")}>
+          <Landing setSelectedPage={setSelectedPage} />
+        </motion.div>
       </div>
 
       <LineGradient />
       <div className='w-5/6 mx-auto md:h-full mb-16'>
-        <MySkills />
+        <motion.div whileInView={() => setSelectedPage("skills")}>
+          <MySkills />
+        </motion.div>
       </div>
 
       <LineGradient />
       <div className='w-5/6 mx-auto'>
-        <Projects />
+        <motion.div whileInView={() => setSelectedPage("projects")}>
+          <Projects />
+        </motion.div>
       </div>
 
       <LineGradient />
       <div className='w-5/6 mx-auto md:h-full mb-32'>
-        <Testimonials />
+        <motion.div whileInView={() => setSelectedPage("testimonials")}>
+          <Testimonials />
+        </motion.div>
       </div>
 
       <LineGradient />
       <div className='w-5/6 mx-auto md:h-full'>
-        <Contact />
+        <motion.div whileInView={() => setSelectedPage("contact")}>
+          <Contact />
+        </motion.div>
       </div>
       <Footer />
     </div>
