@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import LineGradient from "./components/LineGradient";
 import useMediaQuery from "./hooks/useMediaQuery";
+import Contact from "./scenes/Contact";
 import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
@@ -26,7 +27,7 @@ function App() {
     <div className="app bg-deep-blue">
       <Navbar isTopOfPage={isTopOfPage}
         selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <div className='w-5/6 mx-auto md:h-full'>
+      <div className='w-5/6 mx-auto md:h-full mb-16'>
         {isAboveMediumScreens && (
           <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
@@ -34,7 +35,7 @@ function App() {
       </div>
 
       <LineGradient />
-      <div className='w-5/6 mx-auto md:h-full'>
+      <div className='w-5/6 mx-auto md:h-full mb-16'>
         <MySkills />
       </div>
 
@@ -44,8 +45,13 @@ function App() {
       </div>
 
       <LineGradient />
-      <div className='w-5/6 mx-auto md:h-full'>
+      <div className='w-5/6 mx-auto md:h-full mb-32'>
         <Testimonials />
+      </div>
+
+      <LineGradient />
+      <div className='w-5/6 mx-auto md:h-full'>
+        <Contact />
       </div>
     </div>
   );
