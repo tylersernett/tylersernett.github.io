@@ -47,7 +47,7 @@ function App() {
     <div className="app bg-deep-blue">
       <Navbar isTopOfPage={isTopOfPage}
         selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <div className='w-5/6 mx-auto md:h-full mb-16'>
+      <div className='w-5/6 mx-auto'>
         {isAboveMediumScreens && (
           <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
@@ -57,7 +57,7 @@ function App() {
       </div>
 
       <LineGradient />
-      <div ref={skillsRef} className='w-5/6 mx-auto md:h-full mb-16'>
+      <div ref={skillsRef} className='w-5/6 mx-auto'>
           <MySkills />
       </div>
 
@@ -67,12 +67,12 @@ function App() {
       </div>
 
       <LineGradient />
-      <div ref={testimonialsRef} className='w-5/6 mx-auto md:h-full mb-32'>
+      <div ref={testimonialsRef} className='w-5/6 mx-auto'>
           <Testimonials />
       </div>
 
       <LineGradient />
-      <div ref={contactRef} className='w-5/6 mx-auto md:h-full'>
+      <div ref={contactRef} className='w-5/6 mx-auto'>
           <Contact />
       </div>
 
