@@ -16,7 +16,7 @@ const Contact = () => {
         }
     }
     return (
-        <section id="contact" className="py-32">
+        <section id="contact" className="py-24">
             {/* HEADINGS */}
             <motion.div
                 className="flex justify-end w-full"
@@ -30,9 +30,8 @@ const Contact = () => {
                 }}
             >
                 <div>
-
                     <p className='font-playfair font-semibold text-4xl mb-5'>
-                        <span className='text-yellow'>CONTACT ME</span> TO GET STARTED
+                        <span className='text-yellow'>CONTACT ME</span>
                     </p>
                     <div className="flex md:justify-end my-5">
                         <LineGradient width="w-2/4" />
