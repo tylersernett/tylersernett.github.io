@@ -22,16 +22,25 @@ function App() {
   useEffect(() => {
     //change selectedPage based on scroll position
     const handleScroll = () => {
+      const scrollYIsBetweenRefs = (first, second = null) => {
+        if (!second) {
+          return first.current.offsetTop - window.scrollY < window.innerHeight / 2;
+        } else {
+          return first.current.offsetTop - window.scrollY < window.innerHeight / 2 &&
+            second.current.offsetTop - window.scrollY >= window.innerHeight / 2;
+        }
+      }
+
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
         setSelectedPage("home");
-      } else if (skillsRef.current.offsetTop - window.scrollY < window.innerHeight / 2 && projectsRef.current.offsetTop - window.scrollY >= window.innerHeight / 2) {
+      } else if (scrollYIsBetweenRefs(skillsRef, projectsRef)) {
         setSelectedPage("skills");
-      } else if (projectsRef.current.offsetTop - window.scrollY < window.innerHeight / 2 && testimonialsRef.current.offsetTop - window.scrollY >= window.innerHeight / 2) {
+      } else if (scrollYIsBetweenRefs(projectsRef, testimonialsRef)) {
         setSelectedPage("projects");
-      } else if (testimonialsRef.current.offsetTop - window.scrollY < window.innerHeight / 2 && contactRef.current.offsetTop - window.scrollY >= window.innerHeight / 2) {
+      } else if (scrollYIsBetweenRefs(testimonialsRef, contactRef)) {
         setSelectedPage("testimonials");
-      } else if (contactRef.current.offsetTop - window.scrollY < window.innerHeight / 2) {
+      } else if (scrollYIsBetweenRefs(contactRef)) {
         setSelectedPage("contact");
       } else {
         setSelectedPage("home");
@@ -58,22 +67,22 @@ function App() {
 
       <LineGradient />
       <div ref={skillsRef} className='w-5/6 mx-auto'>
-          <MySkills />
+        <MySkills />
       </div>
 
       <LineGradient />
       <div ref={projectsRef} className='w-5/6 mx-auto'>
-          <Projects />
+        <Projects />
       </div>
 
       <LineGradient />
       <div ref={testimonialsRef} className='w-5/6 mx-auto'>
-          <Testimonials />
+        <Testimonials />
       </div>
 
       <LineGradient />
       <div ref={contactRef} className='w-5/6 mx-auto'>
-          <Contact />
+        <Contact />
       </div>
 
       <Footer />
