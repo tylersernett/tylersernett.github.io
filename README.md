@@ -3,6 +3,7 @@
 Issue: getting the navbar text and nav dots to respond to scrolling.
 
 Solution: give each navbar element container div a Ref, and then use the div position relative to the window's inner height -- [Ref].current.offsetTop - window.scrollY  < window.innerHeight / 2 
+(solution adapted from https://stackoverflow.com/questions/63544289/how-to-highlight-navbar-links-on-page-scroll-in-react )
 ```Javascript
   const skillsRef = useRef();
   const projectsRef = useRef();
