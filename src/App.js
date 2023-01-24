@@ -54,16 +54,18 @@ function App() {
 
   return (
     <div className="app bg-deep-blue">
-      <Navbar isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <div className='w-5/6 mx-auto'>
-        {isAboveMediumScreens && (
-          <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-        )}
-        <div>
-          <Landing setSelectedPage={setSelectedPage} />
+      <header>
+        <Navbar isTopOfPage={isTopOfPage}
+          selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        <div className='w-5/6 mx-auto'>
+          {isAboveMediumScreens && (
+            <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+          )}
+          <div>
+            <Landing setSelectedPage={setSelectedPage} />
+          </div>
         </div>
-      </div>
+      </header>
 
       <LineGradient />
       <div ref={skillsRef} className='w-5/6 mx-auto'>

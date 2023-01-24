@@ -23,6 +23,7 @@ module.exports = {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
       },
+      // vars below allow for config using BEFORE tag
       content: {
         brush: "url('./assets/brush.png')",
         person1: "url('./assets/person-1.png')",
