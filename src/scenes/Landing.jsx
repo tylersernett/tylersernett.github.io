@@ -11,7 +11,7 @@ const Landing = ({ setSelectedPage }) => {
             className='md:flex md:justify-between md:items-center md:h-full gap-16 pb-16'>
 
             {/* IMAGE SECTION */}
-            <div className="md:order-2 basis-3/5 z-10 mt-16 md:mt-32 flex justify-center">
+            {/* <div className="md:order-2 basis-3/5 z-10 mt-16 md:mt-32 flex justify-center">
                 {isAboveLargeScreens ? (
                     <div
                         className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 before:rounded-t-[400px]
@@ -30,9 +30,9 @@ const Landing = ({ setSelectedPage }) => {
                         src="assets/profile-image.png"
                     />
                 )}
-            </div>
+            </div> */}
             {/* MAIN SECTION */}
-            <div className='z-30 basis-[55%] mt-12 md:mt-32'>
+            <div className='z-30 basis-[55%] mt-32 md:mt-32'>
                 {/* HEADINGS */}
                 <motion.div
                     initial='hidden'
@@ -51,9 +51,8 @@ const Landing = ({ setSelectedPage }) => {
                                 before:-top-[130px] before:z-[-1]'
                         >Johnson</span>
                     </p>
-                    <p className='mt-10 mb-7 text-center text-sm md:text-base md:text-start '>
-                        Ipsum a arcu cursus vitae.
-                        Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Lorem donec massa.
+                    <p className='mt-12 mb-7 text-center text-sm md:text-base md:text-start '>
+                        Front-end developer seeking full time positions.
                     </p>
                 </motion.div>
 
