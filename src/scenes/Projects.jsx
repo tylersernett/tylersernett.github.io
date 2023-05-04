@@ -15,20 +15,56 @@ const projectVariant = {
     visible: { opacity: 1, scale: 1 }
 }
 
-const Project = ({title}) => {
+const projectsArr = [
+    {
+        name: 'The Hood eStore',
+        description: 'Digital storefront for local Las Cruces, NM business specializing in jewelry, art, and events.',
+        live: 'https://tylersernett.github.io/react-ecommerce/',
+        code: 'https://github.com/tylersernett/react-ecommerce'
+    },
+    {
+        name: 'JSTetris',
+        description: 'Minimalist remake of the NES Tetris port with color-blind accessible design.',
+        live: 'https://tylersernett.github.io/tetris-javascript/',
+        code: 'https://github.com/tylersernett/tetris-javascript'
+    },
+    {
+        name: 'Notflix',
+        description: 'Front end clone of the Netflix UI built with Tailwind styling.',
+        live: 'https://tylersernett.github.io/netflixclone/',
+        code: 'https://github.com/tylersernett/netflixclone'
+    },
+    {
+        name: 'GRE Dashboard',
+        description: 'Accessible front end recreation of the GRE testing interface including a test timer and a calculator.',
+        live: 'https://tylersernett.github.io/grecalc/',
+        code: 'https://github.com/tylersernett/grecalc'
+    },
+    {
+        name: 'Hex Color Trainer',
+        description: 'Responsive mini-game where users guess the hexadecimal code of the displayed color.',
+        live: 'https://tylersernett.github.io/hexcolorgame/',
+        code: 'https://github.com/tylersernett/hexcolorgame'
+    },
+];
+
+const Project = ({ projectObj }) => {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 
-        bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-    const projectTitle = title.split(" ").join("-").toLowerCase();
+        bg-grey z-30 flex flex-col justify-center items-center text-center p-8 text-deep-blue`;
+    const projectTitle = projectObj.name.split(" ").join("-").toLowerCase();
     return (
         <motion.div variants={projectVariant} className='relative'>
             <div className={overlayStyles}>
-                <p className='text-2xl font-playfair'>{title}</p>
-                <p className='mt-7 '>
-                Facilisis sed odio morbi quis commodo odio aenean sed. 
-                Etiam sit amet nisl purus in mollis nunc sed id.  
+                <p className='text-2xl font-playfair'>{projectObj.name}</p>
+                <p className='mt-5'>
+                    {projectObj.description}
                 </p>
+                <span className='mt-5'><a className='cursor-pointer' href={projectObj.live}>live</a> | <a className='cursor-pointer' href={projectObj.code}>code</a></span>
             </div>
-            <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+            <div className='flex justify-center text-center items-center
+                        max-w-[400px] max-h-[400px]'>
+                <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
+            </div>
         </motion.div>
     )
 }
@@ -77,18 +113,16 @@ const Projects = () => {
                     >
                         BEAUTIFUL USER INTERFACES
                     </div>
-                    <Project title="Project 1"></Project>
-                    <Project title="Project 2"></Project>
-                    <Project title="Project 3"></Project>
-                    <Project title="Project 4"></Project>
-                    <Project title="Project 5"></Project>
-                    <Project title="Project 6"></Project>
-                    <Project title="Project 7"></Project>
-                    <div className='flex justify-center text-center items-center p-10 bg-yellow 
+
+                    {projectsArr.map((project) => (
+                        <Project projectObj={project} key={project.name} />
+                    ))}
+                    
+                    {/* <div className='flex justify-center text-center items-center p-10 bg-yellow 
                         max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
                     >
                         SMOOTH USER EXPERIENCE
-                    </div>
+                    </div> */}
                 </motion.div>
             </div>
         </section>
