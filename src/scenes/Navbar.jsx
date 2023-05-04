@@ -34,7 +34,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                         <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        {/* <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} /> */}
                         <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     </div>
                 ) : (
@@ -59,7 +59,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                             <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} setIsMenuToggled={setIsMenuToggled}/>
                             <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} setIsMenuToggled={setIsMenuToggled}/>
                             <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} setIsMenuToggled={setIsMenuToggled}/>
-                            <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} setIsMenuToggled={setIsMenuToggled} />
+                            {/* <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} setIsMenuToggled={setIsMenuToggled} /> */}
                             <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} setIsMenuToggled={setIsMenuToggled}/>
                         </div>
                     </div>
