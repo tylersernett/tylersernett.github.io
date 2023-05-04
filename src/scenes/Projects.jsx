@@ -71,7 +71,15 @@ const Project = ({ projectObj }) => {
                 <p className='mt-5 text-sm lg:text-base'>
                     {projectObj.description}
                 </p>
-                
+                <p className='mt-5 sm:text-sm lg:text-base block sm:hidden md:inline-block'>
+                    {projectObj.stack.map((item, index) => (
+                        <span key={item}>
+                            <i>{item}</i>
+                            {/* add diamonds to all but last */}
+                            {index < projectObj.stack.length - 1 ? " ⬩ " : ""}
+                        </span>
+                    ))}
+                </p>
                 <span className='mt-5 text-sm lg:text-base'><a className='cursor-pointer underline' href={projectObj.live}>live</a> | <a className='cursor-pointer underline' href={projectObj.code}>code</a></span>
             </div>
             <div className='flex justify-center text-center items-center
