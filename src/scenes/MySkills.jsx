@@ -27,6 +27,7 @@ const MySkills = () => {
                         Euismod in pellentesque massa placerat duis.</p>
                 </motion.div>
                 <div className='mt-16 md:mt-0'>
+                    {/* add blue offset frame above skills image */}
                     {isAboveMediumScreens ? (
                         <div
                             className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
@@ -55,16 +56,14 @@ const MySkills = () => {
                     }}
                 >
                     <div className='relative h-32'>
-                        <div className='z-10'>
+                        <React.Fragment className='z-10'>
                             <p className='font-playfair font-semibold text-5xl'>01</p>
-                            <p className='font-playfair font-semibold text-3xl mt-3'>Experienced</p>
-                        </div>
+                            <p className='font-playfair font-semibold text-3xl mt-3'>Languages</p>
+                        </React.Fragment>
                         <div className='w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]'></div>
                     </div>
                     <p className='mt-5'>
-                        Faucibus nisl tincidunt eget nullam non nisi.
-                        Interdum velit laoreet id donec ultrices tincidunt arcu non.
-                        Ultricies mi eget mauris pharetra et.
+                        HTML, CSS, Javascript, C#, Python, GameMaker Language
                     </p>
                 </motion.div>
 
@@ -81,16 +80,14 @@ const MySkills = () => {
                     }}
                 >
                     <div className='relative h-32'>
-                        <div className='z-10'>
+                        <React.Fragment className='z-10'>
                             <p className='font-playfair font-semibold text-5xl'>02</p>
-                            <p className='font-playfair font-semibold text-3xl mt-3'>Innovative</p>
-                        </div>
+                            <p className='font-playfair font-semibold text-3xl mt-3'>Libraries & Frameworks</p>
+                        </React.Fragment>
                         <div className='w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]'></div>
                     </div>
                     <p className='mt-5'>
-                        Elementum integer enim neque volutpat ac tincidunt.
-                        Pretium fusce id velit ut tortor.
-                        Sit amet aliquam id diam maecenas ultricies mi eget mauris.
+                    React, Redux, Node, Express, Tailwind, Material UI, Mongoose, Bootstrap
                     </p>
                 </motion.div>
 
@@ -107,16 +104,14 @@ const MySkills = () => {
                     }}
                 >
                     <div className='relative h-32'>
-                        <div className='z-10'>
+                        <React.Fragment className='z-10'>
                             <p className='font-playfair font-semibold text-5xl'>03</p>
-                            <p className='font-playfair font-semibold text-3xl mt-3'>Imaginative</p>
-                        </div>
+                            <p className='font-playfair font-semibold text-3xl mt-3'>Tools & Databases</p>
+                        </React.Fragment>
                         <div className='w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]'></div>
                     </div>
                     <p className='mt-5'>
-                        Duis tristique sollicitudin nibh sit amet.
-                        Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa.
-                        Arcu bibendum at varius vel pharetra vel.
+                    Git, Github, Firebase, MongoDB, Strapi, Photoshop, Unity
                     </p>
                 </motion.div>
 
