@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useMediaQuery from '../hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import SocialMediaIcons from '../components/SocialMediaIcons'
 
+async function PingServers() {
+    //Spin up portfolio pieces for visitors (slow free servers, can take 30+ seconds)
+    await fetch("https://tetris-javascript.onrender.com/highscores");
+    await fetch("https://the-hood-backend-strapi-fly.fly.dev/api/items?populate=*");
+}
+
 const Landing = ({ setSelectedPage }) => {
     const isAboveLargeScreens = useMediaQuery('(min-width: 1060px)')
+
+    useEffect(() => {
+        PingServers();
+    }, [])
+
+
     return (
         <section id='home'
             className='md:flex md:justify-between md:items-center md:h-full gap-16 pb-16'>
@@ -32,7 +44,7 @@ const Landing = ({ setSelectedPage }) => {
                 )}
             </div> */}
             {/* MAIN SECTION */}
-            <div className='z-30 basis-[55%] mt-32 md:mt-32'>
+            <div className='z-30 basis-[65%] mt-32 md:mt-32'>
                 {/* HEADINGS */}
                 <motion.div
                     initial='hidden'
@@ -51,9 +63,15 @@ const Landing = ({ setSelectedPage }) => {
                                 before:-top-[130px] before:z-[-1]'
                         >Johnson</span>
                     </p>
-                    <p className='mt-12 mb-7 text-center text-sm md:text-base md:text-start '>
-                        Front-end developer seeking full time positions.
-                    </p>
+                    <div className='mt-12 mb-7 text-center md:text-start'>
+                        <p className='text-xl md:text-2xl '>
+                            Front-end developer seeking full time positions.
+                        </p>
+                        <p className='text-base md:text-lg'>
+                            Special Interests: Education, Music, Design, Alternative Transportation
+                        </p>
+                    </div>
+
                 </motion.div>
 
                 {/* CALL TO ACTIONS */}
@@ -85,15 +103,15 @@ const Landing = ({ setSelectedPage }) => {
                     </AnchorLink>
                 </motion.div>
                 <motion.div
-                className='flex mt-5 justify-center md:justify-start'
-                initial='hidden'
-                whileInView='visible'
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                variants={{
-                    hidden: { opacity: 0, x: -50 },
-                    visible: { opacity: 1, x: 0 }
-                }}>
+                    className='flex mt-5 justify-center md:justify-start'
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -50 },
+                        visible: { opacity: 1, x: 0 }
+                    }}>
                     <SocialMediaIcons />
 
                 </motion.div>
