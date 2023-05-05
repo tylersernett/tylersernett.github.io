@@ -7,7 +7,7 @@ const Footer = () => {
                 <SocialMediaIcons />
                 <div className="md:text-left  text-center">
                     <p className="font-playfair font-semibold text-2xl text-yellow mt-2">TYLER JOHNSON</p>
-                    <p className="font-playfair text-md">© 2022 TSJ<br />All Rights Reserved</p>
+                    <p className="font-playfair text-md">© 2023 TSJ<br />All Rights Reserved</p>
                 </div>
             </div>
         </footer>
