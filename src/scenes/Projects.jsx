@@ -6,7 +6,7 @@ const container = {
     hidden: {},
     visible: {
         transition: { staggerChildren: 0.15 }
-        // animation happens for children with 0.2 sec gap in between
+        // animation happens for children with 0.15 sec gap in between
     }
 };
 
@@ -26,35 +26,35 @@ const projectsArr = [
     {
         name: 'JSTetris',
         description: 'Minimalist remake of the NES Tetris port with color-blind accessible design.',
-        stack: ['React', 'Redux', 'Material UI', 'Strapi', 'Stripe', 'Formik', 'Yup'],
+        stack: ['Javascript', 'Express', 'Node','MongoDB', 'Mongoose'],
         live: 'https://tylersernett.github.io/tetris-javascript/',
         code: 'https://github.com/tylersernett/tetris-javascript'
     },
     {
-        name: 'Notflix',
+        name: 'Notflicks',
         description: 'Front end clone of the Netflix UI built with Tailwind styling.',
-        stack: ['React', 'Redux', 'Material UI', 'Strapi', 'Stripe', 'Formik', 'Yup'],
+        stack: ['React', 'Firebase', 'Tailwind', 'Axios'],
         live: 'https://tylersernett.github.io/netflixclone/',
         code: 'https://github.com/tylersernett/netflixclone'
     },
     {
         name: 'GRE Dashboard',
         description: 'Accessible front end recreation of the GRE testing interface including a test timer and a calculator.',
-        stack: ['React', 'Redux', 'Material UI', 'Strapi', 'Stripe', 'Formik', 'Yup'],
+        stack: ['React', 'Bootstrap'],
         live: 'https://tylersernett.github.io/grecalc/',
         code: 'https://github.com/tylersernett/grecalc'
     },
     {
         name: 'Hex Color Trainer',
         description: 'Responsive mini-game where users guess the hexadecimal code of the displayed color.',
-        stack: ['React', 'Redux', 'Material UI', 'Strapi', 'Stripe', 'Formik', 'Yup'],
+        stack: ['React'],
         live: 'https://tylersernett.github.io/hexcolorgame/',
         code: 'https://github.com/tylersernett/hexcolorgame'
     },
     {
         name: 'Personal Portfolio',
         description: "View the code of this site.",
-        stack: ['React', 'Redux', 'Material UI', 'Strapi', 'Stripe', 'Formik', 'Yup'],
+        stack: ['React', 'Tailwind', 'Framer Motion'],
         live: '#0',
         code: 'https://github.com/tylersernett/personal-portfolio'
     },
@@ -62,25 +62,25 @@ const projectsArr = [
 
 const Project = ({ projectObj }) => {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-95 transition duration-500 
-        bg-grey z-30 flex flex-col justify-center items-center text-center py-8 px-4 text-deep-blue`;
+        bg-gray-50 z-30 flex flex-col justify-center items-center text-center py-8 px-4 text-deep-blue`;
     const projectTitle = projectObj.name.split(" ").join("-").toLowerCase();
     return (
         <motion.div variants={projectVariant} className='relative'>
             <div className={overlayStyles}>
-                <p className='text-xl lg:text-2xl font-playfair'>{projectObj.name}</p>
-                <p className='mt-5 text-sm lg:text-base'>
+                <p className='text-red text-2xl sm:text-xl lg:text-2xl font-playfair'>{projectObj.name}</p>
+                <p className='mt-5 text-base sm:text-sm lg:text-base'>
                     {projectObj.description}
                 </p>
-                <p className='mt-5 sm:text-sm lg:text-base block sm:hidden md:inline-block'>
+                <p className='mt-5 block sm:hidden md:inline-block'>
                     {projectObj.stack.map((item, index) => (
-                        <span key={item}>
+                        <span key={item} className='text-base sm:text-sm lg:text-base '>
                             <i>{item}</i>
                             {/* add diamonds to all but last */}
-                            {index < projectObj.stack.length - 1 ? " ⬩ " : ""}
+                            <span className='text-red'>{index < projectObj.stack.length - 1 ? " ⬩ " : ""}</span>
                         </span>
                     ))}
                 </p>
-                <span className='mt-5 text-sm lg:text-base'><a className='cursor-pointer underline' href={projectObj.live}>live</a> | <a className='cursor-pointer underline' href={projectObj.code}>code</a></span>
+                <span className='mt-5 text-base sm:text-sm lg:text-base'><a className='cursor-pointer underline text-red' href={projectObj.live}>live</a> | <a className='cursor-pointer underline text-red' href={projectObj.code}>code</a></span>
             </div>
             <div className='flex justify-center text-center items-center
                         max-w-[400px] max-h-[400px]'>
