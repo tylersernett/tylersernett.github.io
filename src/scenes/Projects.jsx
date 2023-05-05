@@ -114,9 +114,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <p className='mt-10 mb-10'>
-                    Magna fermentum iaculis eu non diam phasellus.
-                    Ornare arcu dui vivamus arcu felis bibendum ut tristique et.
-                    Sem integer vitae justo eget.
+                {/* Descriptive text here */}
                 </p>
             </motion.div>
 
