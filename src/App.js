@@ -17,7 +17,7 @@ function App() {
 
   const skillsRef = useRef();
   const projectsRef = useRef();
-  const testimonialsRef = useRef();
+  // const testimonialsRef = useRef();
   const contactRef = useRef();
   useEffect(() => {
     //change selectedPage based on scroll position
@@ -36,10 +36,10 @@ function App() {
         setSelectedPage("home");
       } else if (scrollYIsBetweenRefs(skillsRef, projectsRef)) {
         setSelectedPage("skills");
-      } else if (scrollYIsBetweenRefs(projectsRef, testimonialsRef)) {
+      } else if (scrollYIsBetweenRefs(projectsRef, contactRef)) {
         setSelectedPage("projects");
-      } else if (scrollYIsBetweenRefs(testimonialsRef, contactRef)) {
-        setSelectedPage("testimonials");
+      // } else if (scrollYIsBetweenRefs(testimonialsRef, contactRef)) {
+      //   setSelectedPage("testimonials");
       } else if (scrollYIsBetweenRefs(contactRef)) {
         setSelectedPage("contact");
       } else {
@@ -77,10 +77,10 @@ function App() {
         <Projects />
       </div>
 
-      <LineGradient />
+      {/* <LineGradient />
       <div ref={testimonialsRef} className='w-5/6 mx-auto'>
         <Testimonials />
-      </div>
+      </div> */}
 
       <LineGradient />
       <div ref={contactRef} className='w-5/6 mx-auto'>
