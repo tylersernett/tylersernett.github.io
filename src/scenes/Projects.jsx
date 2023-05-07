@@ -61,7 +61,7 @@ const projectsArr = [
 ];
 
 const Project = ({ projectObj }) => {
-    const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-95 focus-within:opacity-95 transition duration-500 
+    const overlayStyles = `rounded absolute h-full w-full opacity-0 hover:opacity-95 focus-within:opacity-95 transition duration-500 
         bg-gray-50 z-30 flex flex-col justify-center items-center text-center py-8 px-4 text-deep-blue`;
     const projectTitle = projectObj.name.split(" ").join("-").toLowerCase();
     return (
@@ -84,7 +84,7 @@ const Project = ({ projectObj }) => {
             </div>
             <div className='flex justify-center text-center items-center
                         max-w-[400px] max-h-[400px]'>
-                <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
+                <img src={`../assets/${projectTitle}.png`} alt={projectTitle} className='rounded'/>
             </div>
         </motion.div>
     )
@@ -119,9 +119,9 @@ const Projects = () => {
             </motion.div>
 
             {/* PROJECTS */}
-            <div className='flex justify-center'>
+            <div className='flex justify-center '>
                 <motion.div
-                    className='sm:grid sm:grid-cols-3'
+                    className='sm:grid sm:grid-cols-3 gap-0.5'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.2 }} //bug: high amount will prevent project animations from firing on small screens
