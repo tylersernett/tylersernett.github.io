@@ -28,9 +28,8 @@ const MySkills = () => {
                     </p>
                 </motion.div>
                 <div className='mt-16 md:mt-0'>
-                    {/* add blue offset frame above skills image */}
                     {isAboveMediumScreens ? (
-                        <div
+                        <div //add blue offset frame
                             className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
                             before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
                         >
@@ -61,7 +60,7 @@ const MySkills = () => {
                             <p className='font-playfair font-semibold text-5xl'>01</p>
                             <p className='font-playfair font-semibold text-3xl mt-3'>Languages</p>
                         </div>
-                        <div className='w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]'></div>
+                        <div className='w-1/2 md:w-3/4 h-32 border-2 border-blue absolute right-0 top-0 z-[-1]'></div>
                     </div>
                     <p className='mt-5'>
                         HTML, CSS, Javascript, C#, Python, Lua, GameMaker Language
@@ -85,7 +84,7 @@ const MySkills = () => {
                             <p className='font-playfair font-semibold text-5xl'>02</p>
                             <p className='font-playfair font-semibold text-3xl mt-3'>Libraries & Frameworks</p>
                         </div>
-                        <div className='w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]'></div>
+                        <div className='w-1/2 md:w-3/4 h-32 border-2 border-red  absolute right-0 top-0 z-[-1]'></div>
                     </div>
                     <p className='mt-5'>
                         React, Redux, Node, Express, Tailwind, Material UI, Mongoose, Bootstrap
@@ -109,7 +108,7 @@ const MySkills = () => {
                             <p className='font-playfair font-semibold text-5xl'>03</p>
                             <p className='font-playfair font-semibold text-3xl mt-3'>Tools & Databases</p>
                         </div>
-                        <div className='w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]'></div>
+                        <div className='w-1/2 md:w-3/4 h-32 border-2 border-yellow absolute right-0 top-0 z-[-1]'></div>
                     </div>
                     <p className='mt-5'>
                         Git, Github, Firebase, MongoDB, Strapi, Photoshop, Unity
