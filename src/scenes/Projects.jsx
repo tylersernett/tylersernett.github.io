@@ -61,7 +61,7 @@ const projectsArr = [
 ];
 
 const Project = ({ projectObj }) => {
-    const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-95 transition duration-500 
+    const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-95 focus-within:opacity-95 transition duration-500 
         bg-gray-50 z-30 flex flex-col justify-center items-center text-center py-8 px-4 text-deep-blue`;
     const projectTitle = projectObj.name.split(" ").join("-").toLowerCase();
     return (
