@@ -55,14 +55,13 @@ function App() {
   return (
     <div className="app bg-deep-blue">
       <header>
-        <Navbar isTopOfPage={isTopOfPage}
-          selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} />
         <div className='w-5/6 mx-auto'>
           {isAboveMediumScreens && (
-            <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <DotGroup selectedPage={selectedPage} />
           )}
           <div>
-            <Landing setSelectedPage={setSelectedPage} />
+            <Landing />
           </div>
         </div>
       </header>
@@ -93,3 +92,14 @@ function App() {
 }
 
 export default App;
+//TODO: add underline to navbar
+
+//TODO: project focus ring visibility
+//TODO: contrast: yellow at bottom & navbar, fieldboxes, (X) on mobile menu
+//TODO: gap in project cards
+//TODO: single contact button
+//TODO: left align headings
+//TODO: swap form / image in Contact section
+//TODO: mobile menu modal focus
+//TODO: format TSJ mobile as <p> instead of h4
+//TODO: social icons: <a arialabel=''> <svg> </a>
