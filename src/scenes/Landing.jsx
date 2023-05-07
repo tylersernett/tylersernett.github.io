@@ -56,13 +56,13 @@ const Landing = () => {
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    <p className='text-5xl xs:text-6xl font-playfair z-10 text-center md:text-start'>
+                    <h1 className='text-5xl xs:text-6xl font-playfair z-10 text-center md:text-start'>
                         Tyler&nbsp;{""}
                         <span className='xs:relative xs:text-deep-blue xs:font-semibold z-20
                                 xs:before:content-brush before:absolute before:-left-[42px]
                                 before:-top-[130px] before:z-[-1]'
                         >Johnson</span>
-                    </p>
+                    </h1>
                     <div className='mt-12 mb-7 text-center md:text-start'>
                         <p className='text-xl md:text-2xl '>
                             Front-end developer seeking full time positions.

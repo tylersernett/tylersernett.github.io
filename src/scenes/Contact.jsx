@@ -30,9 +30,9 @@ const Contact = () => {
                 }}
             >
                 <div>
-                    <p className='font-playfair font-semibold text-4xl mb-5'>
+                    <h2 className='font-playfair font-semibold text-4xl mb-5'>
                         <span className='text-yellow'>CONTACT ME</span>
-                    </p>
+                    </h2>
                     <div className="flex md:justify-end my-5">
                         <LineGradient width="w-2/4" />
                     </div>

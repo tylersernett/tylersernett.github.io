@@ -13,15 +13,15 @@ const MySkills = () => {
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.50 }}
                     variants={{
                         hidden: { opacity: 0, x: -50 },
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    <p className='font-playfair font-semibold text-4xl mb-5'>
+                    <h2 className='font-playfair font-semibold text-4xl mb-5'>
                         MY <span className='text-red'>SKILLS</span>
-                    </p>
+                    </h2>
                     <LineGradient width="w-1/3" />
                     <p className='mt-10 mb-7'>
                         I'm always open to learning new technologies and I have completed projects using the following:
@@ -44,13 +44,13 @@ const MySkills = () => {
             {/* SKILLS */}
             <div className='md:flex md:justify-between mt-16 gap-32'>
 
-                {/* EXPERIENCED */}
+                {/* LANGUAGES */}
                 <motion.div
                     className='md:w-1/3 mt-10'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.50 }}
                     variants={{
                         hidden: { opacity: 0, y: 50 },
                         visible: { opacity: 1, y: 0 }
@@ -68,13 +68,13 @@ const MySkills = () => {
                     </p>
                 </motion.div>
 
-                {/* INNOVATIVE */}
+                {/* LIBRARIES / FRAMEWORKS */}
                 <motion.div
                     className='md:w-1/3 mt-10'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ delay: 0.2, duration: 0.5 }}
+                    transition={{ delay: 0.2, duration: 0.50 }}
                     variants={{
                         hidden: { opacity: 0, y: 50 },
                         visible: { opacity: 1, y: 0 }
@@ -92,13 +92,13 @@ const MySkills = () => {
                     </p>
                 </motion.div>
 
-                {/* IMMAGINATIVE */}
+                {/* TOOLS / DATABASES */}
                 <motion.div
                     className='md:w-1/3 mt-10'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.50 }}
                     variants={{
                         hidden: { opacity: 0, y: 50 },
                         visible: { opacity: 1, y: 0 }
