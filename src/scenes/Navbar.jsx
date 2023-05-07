@@ -17,7 +17,7 @@ const Link = ({ page, selectedPage, setIsMenuToggled }) => {
     )
 }
 
-const Navbar = ({ isTopOfPage, selectedPage }) => {
+const Navbar = ({ isTopOfPage, selectedPage, navPages }) => {
     const [isMenuToggled, setIsMenuToggled] = useState();
     const isAboveSmallScreens = useMediaQuery('(min-width: 768px)');
     const navbarBackground = isTopOfPage ? "" : "bg-red";
@@ -29,11 +29,9 @@ const Navbar = ({ isTopOfPage, selectedPage }) => {
                 {/* DESKTOP NAV */}
                 {isAboveSmallScreens ? (
                     <div className='flex justify-between gap-16 font-opensans text-sm md:text-base font-semibold'>
-                        <Link page="Home" selectedPage={selectedPage} />
-                        <Link page="Skills" selectedPage={selectedPage} />
-                        <Link page="Projects" selectedPage={selectedPage} />
-                        {/* <Link page="Testimonials" selectedPage={selectedPage}  /> */}
-                        <Link page="Contact" selectedPage={selectedPage} />
+                        {navPages.map((page) => (
+                            <Link key={page} page={page} selectedPage={selectedPage} />
+                        ))}
                     </div>
                 ) : (
                     // SMALL SCREEN NAV
@@ -54,11 +52,9 @@ const Navbar = ({ isTopOfPage, selectedPage }) => {
 
                         {/* MENU ITEMS */}
                         <div className='flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue '>
-                            <Link page="Home" selectedPage={selectedPage}  setIsMenuToggled={setIsMenuToggled} />
-                            <Link page="Skills" selectedPage={selectedPage}  setIsMenuToggled={setIsMenuToggled} />
-                            <Link page="Projects" selectedPage={selectedPage}  setIsMenuToggled={setIsMenuToggled} />
-                            {/* <Link page="Testimonials" selectedPage={selectedPage}  setIsMenuToggled={setIsMenuToggled} /> */}
-                            <Link page="Contact" selectedPage={selectedPage}  setIsMenuToggled={setIsMenuToggled} />
+                            {navPages.map((page) => (
+                                <Link key={page} page={page} selectedPage={selectedPage} setIsMenuToggled={setIsMenuToggled} />
+                            ))}
                         </div>
                     </div>
                 )}
