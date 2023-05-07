@@ -28,7 +28,7 @@ const Navbar = ({ isTopOfPage, selectedPage, navPages }) => {
                 <p className="font-playfair text-3xl font-bold">TSJ</p>
                 {/* DESKTOP NAV */}
                 {isAboveSmallScreens ? (
-                    <div className='flex justify-between gap-16 font-opensans text-sm md:text-base font-semibold'>
+                    <div className='flex justify-between gap-16 font-opensans text-xl font-bold'>
                         {navPages.map((page) => (
                             <Link key={page} page={page} selectedPage={selectedPage} />
                         ))}
