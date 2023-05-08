@@ -47,6 +47,7 @@ const Landing = () => {
             <div className='z-30 basis-[65%] mt-32 md:mt-32'>
                 {/* HEADINGS */}
                 <motion.div
+                // className='relative'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
@@ -56,14 +57,14 @@ const Landing = () => {
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    <h1 className='text-5xl xs:text-6xl font-playfair z-10 text-center md:text-start'>
-                        Tyler&nbsp;{""}
-                        <span className='xs:relative xs:text-deep-blue xs:font-semibold z-20
-                                xs:before:content-brush before:absolute before:-left-[42px]
-                                before:-top-[130px] before:z-[-1]'
-                        >Johnson</span>
+                    <h1 className='relative text-5xl xs:text-6xl font-playfair z-20 text-center md:text-start'>
+                        <span className='xs:relative text-white z-20
+                                xs:before:content-brush before:absolute before:left-[78px]
+                                before:-top-[110px] before:z-[-1]'
+                        >Tyler  <span className='xs:relative xs:text-deep-blue xs:font-semibold'>Johnson</span></span>
                     </h1>
-                    <div className='mt-12 mb-7 text-center md:text-start'>
+
+                    <div className='relative mt-12 text-center md:text-start z-20'>
                         <p className='text-xl md:text-2xl '>
                             Front-end developer seeking full time positions.
                         </p>
@@ -76,7 +77,7 @@ const Landing = () => {
 
                 {/* CALL TO ACTIONS */}
                 <motion.div
-                    className='flex mt-5 justify-center md:justify-start'
+                    className='flex mt-12 justify-center md:justify-start'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
@@ -94,7 +95,7 @@ const Landing = () => {
                     </AnchorLink>
                 </motion.div>
                 <motion.div
-                    className='flex mt-5 justify-center md:justify-start'
+                    className='flex justify-center md:justify-start'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
