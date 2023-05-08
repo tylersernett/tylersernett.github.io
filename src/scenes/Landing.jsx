@@ -86,18 +86,11 @@ const Landing = () => {
                         visible: { opacity: 1, x: 0 }
                     }}>
                     <AnchorLink
-                        className='bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
-                        hover:bg-blue hover:text-white transition duration-500'
-                        href='#contact'
-                    >
-                        Contact Me
-                    </AnchorLink>
-                    <AnchorLink
-                        className='rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5'
+                        className='rounded-sm bg-gradient-rainblue py-0.5 px-0.5 h-[48px]'
                         href='#contact'
                     >
                         <div className='bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center
-                        font-playfair px-10'>Let's talk.</div>
+                        font-playfair px-10'>Contact Me</div>
                     </AnchorLink>
                 </motion.div>
                 <motion.div
