@@ -2,7 +2,7 @@ import React from 'react'
 
 const SocialMediaIcons = () => {
     return (
-        <div className='flex justify-center md:justify-start mt-10 gap-7'>
+        <div className='flex justify-center md:justify-start gap-7'>
             <a className='hover:opacity-50 transition duration-500'
                 href="https://www.linkedin.com/in/tyler-johnson-92363634/"
                 target="_blank"

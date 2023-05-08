@@ -20,7 +20,7 @@ const Landing = () => {
 
     return (
         <section id='home'
-            className='md:flex md:justify-between md:items-center md:h-full gap-16 pb-16'>
+            className='md:flex md:justify-between md:items-center md:h-full gap-16 pb-16 pt-12'>
 
             {/* IMAGE SECTION */}
             {/* <div className="md:order-2 basis-3/5 z-10 mt-16 md:mt-32 flex justify-center">
@@ -95,7 +95,7 @@ const Landing = () => {
                     </AnchorLink>
                 </motion.div>
                 <motion.div
-                    className='flex justify-center md:justify-start'
+                    className='flex justify-center md:justify-start mt-4'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
