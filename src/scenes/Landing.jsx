@@ -59,8 +59,8 @@ const Landing = () => {
                 >
                     <h1 className='relative text-5xl xs:text-6xl font-playfair z-20 text-center md:text-start'>
                         <span className='xs:relative text-white z-20
-                                xs:before:content-brush before:absolute before:left-[78px]
-                                before:-top-[110px] before:z-[-1]'
+                                xs:before:content-brush before:absolute before:left-[72px]
+                                before:-top-[115px] before:z-[-1]'
                         >Tyler  <span className='xs:relative xs:text-deep-blue xs:font-semibold'>Johnson</span></span>
                     </h1>
 
