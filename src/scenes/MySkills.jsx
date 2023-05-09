@@ -51,7 +51,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <div className='relative h-36'>
+                    <div className='relative h-20 md:h-36'>
                         <div className='z-10'>
                             <p className='font-playfair font-semibold text-5xl'>01</p>
                             <p className='font-playfair font-semibold text-3xl mt-3'>Languages</p>
@@ -75,7 +75,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <div className='relative h-36'>
+                    <div className='relative h-20 md:h-36'>
                         <div className='z-10'>
                             <p className='font-playfair font-semibold text-5xl'>02</p>
                             <p className='font-playfair font-semibold text-3xl mt-3'>Libraries & Frameworks</p>
@@ -99,7 +99,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <div className='relative h-36'>
+                    <div className='relative h-20 md:h-36'>
                         <div className='z-10'>
                             <p className='font-playfair font-semibold text-5xl'>03</p>
                             <p className='font-playfair font-semibold text-3xl mt-3'>Tools & Databases</p>
