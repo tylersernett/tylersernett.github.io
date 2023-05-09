@@ -1,12 +1,9 @@
-import { React, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-// import useMediaQuery from "@mui/material/useMediaQuery";
-
 const ContactForm = () => {
-    const [isSent, setIsSent] = useState(false)
-    // const isNonMobile = useMediaQuery("(min-width:600px)");
+    const [isSent, setIsSent] = useState(false);
 
     const validationSchema = Yup.object({
         name: Yup.string().required('required'),
@@ -58,13 +55,12 @@ const ContactForm = () => {
                     <input
                         type="text"
                         name="name"
-                        className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mb-5 text-deep-blue"
+                        className="w-full bg-blue font-semibold p-3 mb-5 text-deep-blue"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.name}
                     />
                 </label>
-                
 
                 <label>
                     Email {formik.touched.email && formik.errors.email ? (
@@ -79,34 +75,34 @@ const ContactForm = () => {
                         value={formik.values.email}
                     />
                 </label>
-               
+
                 <label>
                     Message {formik.touched.message && formik.errors.message ? (
                         <span className='text-red'>{formik.errors.message}</span>
                     ) : null}
                     <textarea
                         name="message"
-                        className="w-full bg-blue font-semibold placeholder-opaque-black p-3 text-deep-blue"
+                        className="w-full bg-blue font-semibold p-3 text-deep-blue"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.message}
                     />
                 </label>
-                
+
                 <button
                     type='submit'
                     variant='contained'
                     disabled={formik.isSubmitting}
-                    className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
-                        hover:text-white transition duration-500 disabled:bg-gray-500"
+                    className="w-full sm:w-auto sm:min-w-[205px] p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
+                        hover:text-white transition duration-500 disabled:bg-gray-500 disabled:cursor-wait disabled:text-white"
                 >
-                    {formik.isSubmitting ?" SENDING..." : "SEND ME A MESSAGE" }
+                    {formik.isSubmitting ? " SENDING..." : "SEND ME A MESSAGE"}
                 </button>
             </form>
 
             {/* display the following confirmation once server response is received & isSent is true */}
             {isSent && (
-                <p >
+                <p className='mt-2'>
                     Your message has been sent!
                 </p>
             )}
