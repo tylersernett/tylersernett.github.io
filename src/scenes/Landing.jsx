@@ -10,7 +10,7 @@ async function PingServers() {
     await fetch("https://the-hood-backend-strapi-fly.fly.dev/api/items?populate=*");
 }
 
-const Landing = ({ setSelectedPage }) => {
+const Landing = () => {
     const isAboveLargeScreens = useMediaQuery('(min-width: 1060px)')
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const Landing = ({ setSelectedPage }) => {
 
     return (
         <section id='home'
-            className='md:flex md:justify-between md:items-center md:h-full gap-16 pb-16'>
+            className='md:flex md:justify-between md:items-center md:h-full gap-16 pb-16 pt-12'>
 
             {/* IMAGE SECTION */}
             {/* <div className="md:order-2 basis-3/5 z-10 mt-16 md:mt-32 flex justify-center">
@@ -47,6 +47,7 @@ const Landing = ({ setSelectedPage }) => {
             <div className='z-30 basis-[65%] mt-32 md:mt-32'>
                 {/* HEADINGS */}
                 <motion.div
+                // className='relative'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
@@ -56,14 +57,14 @@ const Landing = ({ setSelectedPage }) => {
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    <p className='text-5xl xs:text-6xl font-playfair z-10 text-center md:text-start'>
-                        Tyler&nbsp;{""}
-                        <span className='xs:relative xs:text-deep-blue xs:font-semibold z-20
-                                xs:before:content-brush before:absolute before:-left-[42px]
-                                before:-top-[130px] before:z-[-1]'
-                        >Johnson</span>
-                    </p>
-                    <div className='mt-12 mb-7 text-center md:text-start'>
+                    <h1 className='relative text-5xl xs:text-6xl font-playfair z-20 text-center md:text-start'>
+                        <span className='xs:relative text-white z-20
+                                xs:before:content-brush before:absolute before:left-[72px]
+                                before:-top-[115px] before:z-[-1]'
+                        >Tyler  <span className='xs:relative xs:text-deep-blue xs:font-semibold'>Johnson</span></span>
+                    </h1>
+
+                    <div className='relative mt-12 text-center md:text-start z-20'>
                         <p className='text-xl md:text-2xl '>
                             Front-end developer seeking full time positions.
                         </p>
@@ -76,7 +77,7 @@ const Landing = ({ setSelectedPage }) => {
 
                 {/* CALL TO ACTIONS */}
                 <motion.div
-                    className='flex mt-5 justify-center md:justify-start'
+                    className='flex mt-12 justify-center md:justify-start'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}
@@ -86,24 +87,15 @@ const Landing = ({ setSelectedPage }) => {
                         visible: { opacity: 1, x: 0 }
                     }}>
                     <AnchorLink
-                        className='bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
-                        hover:bg-blue hover:text-white transition duration-500'
-                        onClick={() => setSelectedPage('contact')}
-                        href='#contact'
-                    >
-                        Contact Me
-                    </AnchorLink>
-                    <AnchorLink
-                        className='rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5'
-                        onClick={() => setSelectedPage('contact')}
+                        className='rounded-sm bg-gradient-rainblue py-0.5 px-0.5 h-[48px]'
                         href='#contact'
                     >
                         <div className='bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center
-                        font-playfair px-10'>Let's talk.</div>
+                        font-playfair px-10'>Contact Me</div>
                     </AnchorLink>
                 </motion.div>
                 <motion.div
-                    className='flex mt-5 justify-center md:justify-start'
+                    className='flex justify-center md:justify-start mt-4'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.5 }}

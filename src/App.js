@@ -8,19 +8,21 @@ import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
 import Navbar from "./scenes/Navbar";
 import Projects from "./scenes/Projects";
-import Testimonials from "./scenes/Testimonials";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
+  const navPages = ["Home", "Skills", "Projects", "Contact"];
+
   const skillsRef = useRef();
   const projectsRef = useRef();
   // const testimonialsRef = useRef();
   const contactRef = useRef();
+  
+  //change selectedPage based on scroll position
   useEffect(() => {
-    //change selectedPage based on scroll position
     const handleScroll = () => {
       const scrollYIsBetweenRefs = (first, second = null) => {
         if (!second) {
@@ -55,14 +57,13 @@ function App() {
   return (
     <div className="app bg-deep-blue">
       <header>
-        <Navbar isTopOfPage={isTopOfPage}
-          selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} navPages={navPages}/>
         <div className='w-5/6 mx-auto'>
           {isAboveMediumScreens && (
-            <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <DotGroup selectedPage={selectedPage} navPages={navPages}/>
           )}
           <div>
-            <Landing setSelectedPage={setSelectedPage} />
+            <Landing />
           </div>
         </div>
       </header>
@@ -93,3 +94,7 @@ function App() {
 }
 
 export default App;
+
+//TODO: contrast: yellow at bottom & navbar, fieldboxes, (X) on mobile menu
+//TODO: left align headings
+//TODO: mobile menu modal focus

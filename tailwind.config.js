@@ -6,18 +6,15 @@ module.exports = {
     extend: {
       colors: {
         blue: "#2cbce9",
-        red: "#DC4492",
-        yellow: "#fdcc49",
-        grey: "#ededed",
+        red: "#dc2d74",
+        yellow: "#fdcd49",
         "deep-blue": "#010026",
+        grey: "#ededed",
         "dark-grey": "#757575",
-        "opaque-black": "rgba(0,0,0,0.35)"
       },
       backgroundImage: (theme) => ({
-        "gradient-rainbow":
-          "linear-gradient(81.66deg, #00b5ee 7.21%, #ff45a4 45.05%, #ffba00 78.07%",
         "gradient-rainblue":
-          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+          "linear-gradient(90deg, #24CBFF 14%, #dc2d74 49%, #FFBD0C 107%)",
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
@@ -25,10 +22,7 @@ module.exports = {
       },
       // vars below allow for config using BEFORE tag
       content: {
-        brush: "url('./assets/brush.png')",
-        person1: "url('./assets/brush.png')",
-        person2: "url('./assets/brush.png')",
-        person3: "url('./assets/brush.png')",
+        brush: "url('./assets/splash-short2.png')",
       },
     },
     screens: {
