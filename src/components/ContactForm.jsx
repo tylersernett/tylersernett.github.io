@@ -31,19 +31,27 @@ const ContactForm = () => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
-                    //successful response:
                     formik.resetForm();
                     setIsSent(true)
-                    //return response.text();
                 })
-                .then(data => {
-                    console.log(data);
-                })
+                // .then(data => {
+                //     console.log(data);
+                // })
                 .catch(error => {
                     console.error('There was a problem with the form submission:', error);
                 });
         },
     });
+    
+  // useEffect hook to reset isSent to false after 3 seconds
+  useEffect(() => {
+    if (isSent) {
+        const timer = setTimeout(() => {
+            setIsSent(false);
+        }, 3000);
+        return () => clearTimeout(timer);
+    }
+}, [isSent]);
 
     return (
         <div>
@@ -69,7 +77,7 @@ const ContactForm = () => {
                     <input
                         type="email"
                         name="email"
-                        className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mb-5 text-deep-blue"
+                        className="w-full bg-blue font-semibold p-3 mb-5 text-deep-blue"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.email}
