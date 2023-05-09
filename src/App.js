@@ -94,14 +94,7 @@ function App() {
 }
 
 export default App;
-//TODO: add underline to navbar
-//TODO: social icons: <a arialabel=''> <svg> </a>
-//TODO: project focus ring visibility
-//TODO: gap in project cards
-//TODO: format TSJ mobile as <p> instead of h4
 
-//TODO: single contact button
-//TODO: left align headings
-//TODO: swap form / image in Contact section
-//TODO: mobile menu modal focus
 //TODO: contrast: yellow at bottom & navbar, fieldboxes, (X) on mobile menu
+//TODO: left align headings
+//TODO: mobile menu modal focus
