@@ -11,11 +11,8 @@ module.exports = {
         "deep-blue": "#010026",
         grey: "#ededed",
         "dark-grey": "#757575",
-        "opaque-black": "rgba(0,0,0,0.35)",
       },
       backgroundImage: (theme) => ({
-        "gradient-rainbow":
-          "linear-gradient(81.66deg, #00b5ee 7%, #ff45a4 45%, #ffba00 78%",
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14%, #dc2d74 49%, #FFBD0C 107%)",
       }),
@@ -25,7 +22,7 @@ module.exports = {
       },
       // vars below allow for config using BEFORE tag
       content: {
-        brush: "url('./assets/brush.png')",
+        brush: "url('./assets/splash-short2.png')",
       },
     },
     screens: {
