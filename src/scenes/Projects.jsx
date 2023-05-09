@@ -26,7 +26,7 @@ const projectsArr = [
     {
         name: 'JSTetris',
         description: 'Minimalist remake of the NES Tetris port with color-blind accessible design.',
-        stack: ['Javascript', 'Express', 'Node','MongoDB', 'Mongoose'],
+        stack: ['Javascript', 'Express', 'Node', 'MongoDB', 'Mongoose'],
         live: 'https://tylersernett.github.io/tetris-javascript/',
         code: 'https://github.com/tylersernett/tetris-javascript'
     },
@@ -54,7 +54,7 @@ const projectsArr = [
     {
         name: 'Personal Portfolio',
         description: "View the code of this site.",
-        stack: ['React', 'Tailwind', 'Framer Motion'],
+        stack: ['React', 'Tailwind', 'Framer Motion', 'Formik', 'Yup'],
         live: '#0',
         code: 'https://github.com/tylersernett/personal-portfolio'
     },
@@ -67,24 +67,24 @@ const Project = ({ projectObj }) => {
     return (
         <motion.div variants={projectVariant} className='relative'>
             <div className={overlayStyles}>
-                <p className='text-red text-2xl sm:text-xl lg:text-2xl font-playfair'>{projectObj.name}</p>
-                <p className='mt-5 text-base sm:text-sm lg:text-base'>
+                <p className='text-red text-2xl font-playfair'>{projectObj.name}</p>
+                <p className='mt-5 text-base '>
                     {projectObj.description}
                 </p>
-                <p className='mt-5 block sm:hidden md:inline-block'>
+                <p className='mt-5 block md:inline-block'>
                     {projectObj.stack.map((item, index) => (
-                        <span key={item} className='text-base sm:text-sm lg:text-base '>
+                        <span key={item} className='text-base '>
                             <i>{item}</i>
                             {/* add diamonds to all but last */}
                             <span className='text-red'>{index < projectObj.stack.length - 1 ? " ⬩ " : ""}</span>
                         </span>
                     ))}
                 </p>
-                <span className='mt-5 text-base sm:text-sm lg:text-base'><a className='cursor-pointer underline text-red' href={projectObj.live}>live</a> | <a className='cursor-pointer underline text-red' href={projectObj.code}>code</a></span>
+                <span className='mt-5 text-base' ><a className='cursor-pointer underline text-red' href={projectObj.live}>live</a> | <a className='cursor-pointer underline text-red' href={projectObj.code}>code</a></span>
             </div>
             <div className='flex justify-center text-center items-center
                         max-w-[400px] max-h-[400px]'>
-                <img src={`../assets/${projectTitle}.png`} alt={projectTitle} className='rounded'/>
+                <img src={`../assets/${projectTitle}.png`} alt={projectTitle} className='rounded' />
             </div>
         </motion.div>
     )
@@ -114,14 +114,14 @@ const Projects = () => {
                     </div>
                 </div>
                 <p className='mt-10 mb-10'>
-                {/* Descriptive text here */}
+                    {/* Descriptive text here */}
                 </p>
             </motion.div>
 
             {/* PROJECTS */}
             <div className='flex justify-center '>
                 <motion.div
-                    className='sm:grid sm:grid-cols-3 gap-0.5'
+                    className='sm:grid sm:grid-cols-2 sm:gap-1.5 md:grid-cols-3'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.2 }} //bug: high amount will prevent project animations from firing on small screens
