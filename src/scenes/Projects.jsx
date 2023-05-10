@@ -80,7 +80,10 @@ const Project = ({ projectObj }) => {
                         </span>
                     ))}
                 </p>
-                <span className='mt-5 text-base' ><a className='cursor-pointer underline text-red' href={projectObj.live}>live</a> | <a className='cursor-pointer underline text-red' href={projectObj.code}>code</a></span>
+                <span className='mt-5 text-base' >
+                    <a className='cursor-pointer underline text-red focus:outline-none focus:ring focus:ring-offset-1 focus:ring-red focus:rounded-sm' href={projectObj.live}>live</a>
+                    &nbsp;|&nbsp;
+                    <a className='cursor-pointer underline text-red focus:outline-none focus:ring focus:ring-offset-1 focus:ring-red focus:rounded-sm' href={projectObj.code}>code</a></span>
             </div>
             <div className='flex justify-center text-center items-center
                         max-w-[400px] max-h-[400px]'>

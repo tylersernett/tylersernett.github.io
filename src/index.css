@@ -16,3 +16,13 @@ body,
   -moz-osx-font-smoothing: grayscale; */
   @apply text-white;
 }
+
+*:focus {
+  outline: 2px solid #fdcd49;
+  outline-offset: 3px;
+  border-radius: 3px;
+} 
+
+button[type=submit]:focus {
+  outline: 2px solid #2cbce9;
+} 
