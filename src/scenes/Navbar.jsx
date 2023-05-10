@@ -2,6 +2,9 @@ import { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
 import ReactModal from 'react-modal';
+import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
+
+ReactModal.setAppElement('body');
 
 const Link = ({ page, selectedPage, setIsMenuOpen }) => {
     const lowerCasePage = page.toLowerCase();
@@ -34,7 +37,7 @@ const Navbar = ({ isTopOfPage, selectedPage, navPages }) => {
     }
 
     //actually styled with tailwind later, this is just dummy info for the ReactModal props
-    const CONTENT_STYLES ={
+    const CONTENT_STYLES = {
         left: -200,
         width: '50px',
     }
@@ -60,21 +63,20 @@ const Navbar = ({ isTopOfPage, selectedPage, navPages }) => {
                 {/* MOBILE MENU POPUP */}
 
                 {/* MODAL */}
-                <ReactModal isOpen={isMenuOpen} onRequestClose={() => setIsMenuOpen(false)}
-                style={{ overlay: OVERLAY_STYLES, content:CONTENT_STYLES }}
-                shouldCloseOnOverlayClick={true}
-                // onAfterOpen={() => {
-                //     document.body.style.top = `-${window.scrollY}`
-                //     document.body.style.position = 'fixed'
-                //   }}
-                //   onAfterClose={() => {
-                //     const scrollY = document.body.style.top
-                //     document.body.style.position = ''
-                //     document.body.style.top = ''
-                //     window.scrollTo(0, parseInt(scrollY || '0') * -1)
-                //   }}
+                <ReactModal
+                    isOpen={isMenuOpen}
+                    onRequestClose={() => setIsMenuOpen(false)}
+                    style={{ overlay: OVERLAY_STYLES, content: CONTENT_STYLES }}
+                    shouldCloseOnOverlayClick={true}
+                    
+                    onAfterOpen={() => {
+                        disableBodyScroll(document.body)
+                    }}
+                    onAfterClose={() => {
+                        enableBodyScroll(document.body)
+                    }}
                 >
-                    <div className='fixed right-0 bottom-0 h-full bg-blue w-[300px]'>
+                    <div className='fixed right-0 bottom-0 h-full bg-red w-[300px]'>
                         {/* CLOSE ICON */}
                         <div className='flex justify-end p-12'>
                             <button onClick={() => setIsMenuOpen(false)}>
