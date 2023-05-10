@@ -63,7 +63,7 @@ const ContactForm = () => {
                     <input
                         type="text"
                         name="name"
-                        className="w-full bg-blue font-semibold p-3 mb-5 text-deep-blue"
+                        className="w-full bg-blue font-semibold p-3 mt-1 mb-5 text-deep-blue"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.name}
@@ -77,7 +77,7 @@ const ContactForm = () => {
                     <input
                         type="email"
                         name="email"
-                        className="w-full bg-blue font-semibold p-3 mb-5 text-deep-blue"
+                        className="w-full bg-blue font-semibold p-3 mt-1 mb-5 text-deep-blue"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.email}
@@ -90,7 +90,7 @@ const ContactForm = () => {
                     ) : null}
                     <textarea
                         name="message"
-                        className="w-full bg-blue font-semibold p-3 text-deep-blue"
+                        className="w-full bg-blue font-semibold p-3 mt-1 text-deep-blue"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.message}
