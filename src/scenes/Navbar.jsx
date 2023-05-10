@@ -32,7 +32,7 @@ const Navbar = ({ isTopOfPage, selectedPage, navPages }) => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0,0,0,0.25)',
+        backgroundColor: 'rgba(0,0,0,0.2)',
         zIndex: 999
     }
 
@@ -85,7 +85,7 @@ const Navbar = ({ isTopOfPage, selectedPage, navPages }) => {
                         </div>
 
                         {/* MENU ITEMS */}
-                        <div className='flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue '>
+                        <div className='flex flex-col gap-10 ml-[33%] text-2xl text-white '>
                             {navPages.map((page) => (
                                 <Link key={page} page={page} selectedPage={selectedPage} setIsMenuOpen={setIsMenuOpen} />
                             ))}
