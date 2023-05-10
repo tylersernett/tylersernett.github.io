@@ -119,9 +119,9 @@ const Projects = () => {
             </motion.div>
 
             {/* PROJECTS */}
-            <div className='flex justify-center '>
+            <div className='flex justify-center'>
                 <motion.div
-                    className='sm:grid sm:grid-cols-2 sm:gap-1.5 md:grid-cols-3'
+                    className='grid grid-cols-1 gap-1.5 sm:grid-cols-2  md:grid-cols-3'
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true, amount: 0.2 }} //bug: high amount will prevent project animations from firing on small screens
