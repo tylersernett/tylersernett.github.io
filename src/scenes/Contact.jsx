@@ -60,9 +60,9 @@ const Contact = () => {
                             before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
                     > */}
                     <img
-                        className="z-10 hidden md:block"
+                        className="z-10 hidden md:block object-cover max-h-[382px]"
                         // className="bg-gradient-rainblue py-0.5 px-0.5"
-                        style={{ objectFit: 'cover' }} src="../assets/contact.png" alt='contact' />
+                        src="../assets/contact.png" alt='contact' />
                     {/* </div> */}
                 </motion.div>
             </div>
