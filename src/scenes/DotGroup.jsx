@@ -11,7 +11,7 @@ const DotGroup = ({ selectedPage, navPages }) => {
                 <AnchorLink
                     key={page}
                     className={`${selectedPage === page.toLowerCase() ? selectedStyles : "bg-dark-grey"}
-                w-3 h-3 rounded-full`}
+                w-3 h-3 rounded-full focus:outline-none focus-visible:ring-8 focus-visible:ring-blue focus-visible:rounded-full focus-visible:ring-offset-1 focus-visible:ring-offset-deep-blue`}
                     href={`#${page.toLowerCase()}`}
                 />
             ))}

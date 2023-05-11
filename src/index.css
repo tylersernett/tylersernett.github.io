@@ -17,12 +17,12 @@ body,
   @apply text-white;
 }
 
-*:focus {
+*:focus-visible {
   outline: 2px solid #fdcd49;
   outline-offset: 3px;
   border-radius: 3px;
 } 
 
-button[type=submit]:focus {
+button[type=submit]:focus-visible {
   outline: 2px solid #2cbce9;
 } 
