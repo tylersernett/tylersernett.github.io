@@ -18,9 +18,8 @@ function App() {
 
   const skillsRef = useRef();
   const projectsRef = useRef();
-  // const testimonialsRef = useRef();
   const contactRef = useRef();
-  
+
   //change selectedPage based on scroll position
   useEffect(() => {
     const handleScroll = () => {
@@ -40,8 +39,6 @@ function App() {
         setSelectedPage("skills");
       } else if (scrollYIsBetweenRefs(projectsRef, contactRef)) {
         setSelectedPage("projects");
-      // } else if (scrollYIsBetweenRefs(testimonialsRef, contactRef)) {
-      //   setSelectedPage("testimonials");
       } else if (scrollYIsBetweenRefs(contactRef)) {
         setSelectedPage("contact");
       } else {
@@ -50,17 +47,30 @@ function App() {
 
       if (window.scrollY !== 0) setIsTopOfPage(false);
     }
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const debouncedHandleScroll = debounce(handleScroll, 100); // Debounce scroll event handler
+
+    window.addEventListener("scroll", debouncedHandleScroll);
+    return () => window.removeEventListener('scroll', debouncedHandleScroll);
   }, []);
+
+  //debounce: use to prevent handleScroll from firing constantly (the selectedPage doesn't need to update mid-scroll, only when scroll has ended)
+  function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
+  }
 
   return (
     <div className="app bg-deep-blue">
       <header>
-        <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} navPages={navPages}/>
+        <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} navPages={navPages} />
         <div className='w-5/6 mx-auto'>
           {isAboveMediumScreens && (
-            <DotGroup selectedPage={selectedPage} navPages={navPages}/>
+            <DotGroup selectedPage={selectedPage} navPages={navPages} />
           )}
           <div>
             <Landing />
@@ -78,11 +88,6 @@ function App() {
         <Projects />
       </div>
 
-      {/* <LineGradient />
-      <div ref={testimonialsRef} className='w-5/6 mx-auto'>
-        <Testimonials />
-      </div> */}
-
       <LineGradient />
       <div ref={contactRef} className='w-5/6 mx-auto'>
         <Contact />
@@ -94,7 +99,3 @@ function App() {
 }
 
 export default App;
-
-//TODO: contrast: yellow at bottom & navbar, fieldboxes, (X) on mobile menu
-//TODO: left align headings
-//TODO: mobile menu modal focus
