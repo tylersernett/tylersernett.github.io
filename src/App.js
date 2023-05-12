@@ -15,25 +15,20 @@ function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   const navPages = ["Home", "Skills", "Projects", "Contact"];
-
   const skillsRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
 
-  //change selectedPage based on scroll position
   useEffect(() => {
+    //change selectedPage based on scroll position
     const handleScroll = () => {
       const scrollYIsBetweenRefs = (first, second = null) => {
-        if (!second) {
-          return first.current.offsetTop - window.scrollY < window.innerHeight / 2;
-        } else {
-          return first.current.offsetTop - window.scrollY < window.innerHeight / 2 &&
-            second.current.offsetTop - window.scrollY >= window.innerHeight / 2;
-        }
-      }
-
+        return (
+          first.current.offsetTop - window.scrollY < window.innerHeight / 2 &&
+          (!second || second.current.offsetTop - window.scrollY >= window.innerHeight / 2)
+        );
+      };
       if (window.scrollY === 0) {
-        setIsTopOfPage(true);
         setSelectedPage("home");
       } else if (scrollYIsBetweenRefs(skillsRef, projectsRef)) {
         setSelectedPage("skills");
@@ -44,13 +39,20 @@ function App() {
       } else {
         setSelectedPage("home");
       }
-
-      if (window.scrollY !== 0) setIsTopOfPage(false);
     }
-    const debouncedHandleScroll = debounce(handleScroll, 100); // Debounce scroll event handler
 
+    const debouncedHandleScroll = debounce(handleScroll, 100); // Debounce scroll event handler
     window.addEventListener("scroll", debouncedHandleScroll);
-    return () => window.removeEventListener('scroll', debouncedHandleScroll);
+    
+    //check if at top (top recolor navbar) -- don't debounce this; needs immediate response
+    const topCheck = () => {
+      setIsTopOfPage(window.scrollY === 0);
+    }
+    window.addEventListener("scroll", topCheck);
+    return () => {
+      window.removeEventListener('scroll', debouncedHandleScroll);
+      window.removeEventListener('scroll', topCheck);
+    }
   }, []);
 
   //debounce: use to prevent handleScroll from firing constantly (the selectedPage doesn't need to update mid-scroll, only when scroll has ended)
