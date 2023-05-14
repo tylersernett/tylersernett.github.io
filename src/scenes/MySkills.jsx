@@ -1,25 +1,24 @@
 import React from 'react'
 import LineGradient from '../components/LineGradient'
-import useMediaQuery from '../hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 
 const skills = [{
     number: '01',
     title: 'Languages',
     list: 'HTML, CSS, Javascript, C#, Python, Lua, GameMaker Language',
-    color: 'blue'
+    color: 'border-blue'
 },
 {
     number: '02',
     title: 'Libraries & Frameworks',
     list: 'React, Redux, Node, Express, Tailwind, Material UI, Mongoose, Bootstrap',
-    color: 'red'
+    color: 'border-red'
 },
 {
     number: '03',
     title: 'Tools & Databases',
     list: 'Git, Github, Firebase, MongoDB, Strapi, Photoshop, Unity',
-    color: 'yellow'
+    color: 'border-yellow'
 }];
 
 const MySkills = () => {
@@ -77,7 +76,7 @@ const MySkills = () => {
                                 <p className='text-3xl mt-2'>{skill.title}</p>
                             </div>
                             {/* color box border */}
-                            <div className={`w-1/2 md:w-3/4 h-36 border border-${skill.color} absolute right-0 top-0 z-[-1]`}></div>
+                            <div className={`w-1/2 md:w-3/4 h-36 border ${skill.color} absolute right-0 top-0 z-[-1]`}></div>
                         </div>
                         <p className='mt-1'>
                             {skill.list}
