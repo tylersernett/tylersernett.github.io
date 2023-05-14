@@ -102,3 +102,21 @@ This can be further improved with debouncing. Currently, the above handleScroll 
     };
   }
 ```
+
+## Notes: Dynamic Tailwind colors
+
+Wrong: don't try to break up class names
+```jsx
+skill=[{color:"blue"}]
+return(
+<div className={`border border-${skill.color}`}>
+)
+```
+
+Right: use the entire class name:
+```jsx
+skill=[{color:"border-blue"}]
+return(
+<div className={`border ${skill.color}`}>
+)
+```
