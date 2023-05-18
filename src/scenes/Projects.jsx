@@ -24,9 +24,9 @@ const projectsArr = [
         code: 'https://github.com/tylersernett/react-ecommerce'
     },
     {
-        name: 'JSTetris',
-        description: 'Minimalist remake of the NES Tetris port with color-blind accessible design.',
-        stack: ['Javascript', 'Express', 'Node', 'MongoDB', 'Mongoose'],
+        name: 'TSTetris',
+        description: 'Minimalist remake of the NES Tetris port created with vanilla TypeScript and color-blind accessible design.',
+        stack: ['Typescript', 'Express', 'Node', 'MongoDB', 'Mongoose'],
         live: 'https://tylersernett.github.io/tetris-javascript/',
         code: 'https://github.com/tylersernett/tetris-javascript'
     },
