@@ -26,7 +26,7 @@ const projectsArr = [
     {
         name: 'TSTetris',
         description: 'Minimalist remake of the NES Tetris port created with vanilla TypeScript and color-blind accessible design.',
-        stack: ['Typescript', 'Express', 'Node', 'MongoDB', 'Mongoose'],
+        stack: ['TypeScript', 'Express', 'Node', 'MongoDB', 'Mongoose'],
         live: 'https://tylersernett.github.io/tetris-javascript/',
         code: 'https://github.com/tylersernett/tetris-javascript'
     },
@@ -133,7 +133,7 @@ const Projects = () => {
                     {/* <div className='flex justify-center text-center items-center p-10 bg-blue 
                         max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
                     >
-                        BEAUTIFUL USER INTERFACES
+                        PLACEHOLDER TEXT
                     </div> */}
 
                     {projectsArr.map((project) => (
@@ -143,7 +143,7 @@ const Projects = () => {
                     {/* <div className='flex justify-center text-center items-center p-10 bg-yellow 
                         max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
                     >
-                        SMOOTH USER EXPERIENCE
+                        PLACEHOLDER TEXT
                     </div> */}
                 </motion.div>
             </div>
