@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import useMediaQuery from '../hooks/useMediaQuery'
+// import useMediaQuery from '../hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import SocialMediaIcons from '../components/SocialMediaIcons'
@@ -11,7 +11,7 @@ async function PingServers() {
 }
 
 const Landing = () => {
-    const isAboveLargeScreens = useMediaQuery('(min-width: 1060px)')
+    // const isAboveLargeScreens = useMediaQuery('(min-width: 1060px)')
 
     useEffect(() => {
         PingServers();
@@ -66,7 +66,7 @@ const Landing = () => {
 
                     <div className='relative mt-12 text-center md:text-start z-20'>
                         <p className='text-xl md:text-2xl '>
-                            Front-end developer seeking full time positions.
+                            Web developer seeking full time positions.
                         </p>
                         <p className='text-base md:text-lg'>
                             Special Interests: Education, Music, Design, Alternative Transportation
