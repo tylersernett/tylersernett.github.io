@@ -120,3 +120,9 @@ return(
 <div className={`border ${skill.color}`}>
 )
 ```
+
+## Notes: Accessibility for hover styles
+Use the focus-within pseudo-class to allow style changes when an element receives focus through tabbing.
+```js
+const overlayStyles = 'hover:opacity-95 focus-within:opacity-95'
+```
