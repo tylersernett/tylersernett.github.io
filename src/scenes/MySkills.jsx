@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const skills = [{
     number: '01',
     title: 'Languages',
-    list: 'HTML, CSS, Javascript, C#, Python, Lua, GameMaker Language',
+    list: 'HTML, CSS, JavaScript, TypeScript, C#, Python, Lua, GameMaker Language',
     color: 'border-blue'
 },
 {
