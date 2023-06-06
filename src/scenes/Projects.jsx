@@ -25,8 +25,8 @@ const projectsArr = [
     },
     {
         name: 'TSTetris',
-        description: 'Minimalist remake of the NES Tetris port created with vanilla TypeScript and color-blind accessible design.',
-        stack: ['TypeScript', 'Express', 'Node', 'MongoDB', 'Mongoose'],
+        description: 'Minimalist remake of the NES Tetris port created with vanilla TypeScript, color-blind accessible design, and a highsccore API.',
+        stack: ['TypeScript', 'Express', 'Node', 'MongoDB', 'Mongoose', 'Webpack', 'Canvas'],
         live: 'https://tylersernett.github.io/tetris-javascript/',
         code: 'https://github.com/tylersernett/tetris-javascript'
     },

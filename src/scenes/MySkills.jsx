@@ -17,7 +17,7 @@ const skills = [{
 {
     number: '03',
     title: 'Tools & Databases',
-    list: 'Git, Github, Firebase, MongoDB, Strapi, Photoshop, Unity',
+    list: 'Git, Github, Webpack, Canvas, Firebase, MongoDB, Strapi, Photoshop, Unity',
     color: 'border-yellow'
 }];
 
