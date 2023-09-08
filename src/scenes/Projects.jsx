@@ -24,6 +24,13 @@ const projectsArr = [
         code: 'https://github.com/tylersernett/react-ecommerce'
     },
     {
+        name: 'GRE Dashboard',
+        description: 'Accessible front end recreation of the GRE testing interface with question module, timer, and calculator.',
+        stack: ['React', 'Bootstrap'],
+        live: 'https://tylersernett.github.io/grecalc/',
+        code: 'https://github.com/tylersernett/grecalc'
+    },
+    {
         name: 'TSTetris',
         description: 'Minimalist remake of the NES Tetris port created with vanilla TypeScript, color-blind accessible design, and a highsccore API.',
         stack: ['TypeScript', 'Express', 'Node', 'MongoDB', 'Mongoose', 'Webpack', 'Canvas'],
@@ -36,13 +43,6 @@ const projectsArr = [
         stack: ['React', 'Firebase', 'Tailwind', 'Axios'],
         live: 'https://tylersernett.github.io/netflixclone/',
         code: 'https://github.com/tylersernett/netflixclone'
-    },
-    {
-        name: 'GRE Dashboard',
-        description: 'Accessible front end recreation of the GRE testing interface including a test timer and a calculator.',
-        stack: ['React', 'Bootstrap'],
-        live: 'https://tylersernett.github.io/grecalc/',
-        code: 'https://github.com/tylersernett/grecalc'
     },
     {
         name: 'Hex Color Trainer',
