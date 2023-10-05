@@ -17,6 +17,13 @@ const projectVariant = {
 
 const projectsArr = [
     {
+        name: 'Rudi Metronome',
+        description: 'Rudi is a fullstack app that allows users to save and load customized metronome patterns.',
+        stack: ['React', 'TypeScript', 'Material UI', 'Express',],
+        live: 'https://tylersernett.github.io/rudi-drum/',
+        code: 'https://github.com/tylersernett/rudi-drum'
+    },
+    {
         name: 'The Hood eStore',
         description: 'Digital storefront for local Las Cruces, NM business specializing in jewelry, art, and events.',
         stack: ['React', 'Redux', 'Material UI', 'Strapi', 'Stripe', 'Formik', 'Yup'],
