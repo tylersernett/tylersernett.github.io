@@ -17,6 +17,13 @@ const projectVariant = {
 
 const projectsArr = [
     {
+        name: 'Rudi Metronome',
+        description: 'Rudi is a fullstack app that allows users to save and load customized metronome patterns.',
+        stack: ['React', 'TypeScript', 'Material UI', 'Express',],
+        live: 'https://tylersernett.github.io/rudi-drum/',
+        code: 'https://github.com/tylersernett/rudi-drum'
+    },
+    {
         name: 'The Hood eStore',
         description: 'Digital storefront for local Las Cruces, NM business specializing in jewelry, art, and events.',
         stack: ['React', 'Redux', 'Material UI', 'Strapi', 'Stripe', 'Formik', 'Yup'],
@@ -130,21 +137,21 @@ const Projects = () => {
                     viewport={{ once: true, amount: 0.2 }} //bug: high amount will prevent project animations from firing on small screens
                     variants={container}
                 >
-                    {/* <div className='flex justify-center text-center items-center p-10 bg-blue 
+                    <div className='hidden sm:flex justify-center text-center items-center p-10 bg-blue 
                         max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
                     >
-                        PLACEHOLDER TEXT
-                    </div> */}
+                        AESTHETIC<br/>DESIGNS
+                    </div>
 
                     {projectsArr.map((project) => (
                         <Project projectObj={project} key={project.name} />
                     ))}
 
-                    {/* <div className='flex justify-center text-center items-center p-10 bg-yellow 
+                    <div className='hidden md:flex justify-center text-center items-center p-10 bg-red 
                         max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'
                     >
-                        PLACEHOLDER TEXT
-                    </div> */}
+                        INTUITIVE<br/>EXPERIENCES
+                    </div>
                 </motion.div>
             </div>
         </section>

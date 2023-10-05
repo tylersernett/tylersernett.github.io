@@ -5,19 +5,19 @@ import { motion } from 'framer-motion'
 const skills = [{
     number: '01',
     title: 'Languages',
-    list: 'HTML, CSS, JavaScript, TypeScript, C#, Python, Lua, GameMaker Language',
+    list: 'HTML, CSS, JavaScript (ES6), TypeScript, C#, Python, GameMaker Language',
     color: 'border-blue'
 },
 {
     number: '02',
     title: 'Libraries & Frameworks',
-    list: 'React, Redux, Node, Express, Tailwind, Material UI, Mongoose, Bootstrap',
+    list: 'React, Redux, React Native, Node, Express, Mongoose, Sequilize, Tailwind, Material UI, Bootstrap',
     color: 'border-red'
 },
 {
     number: '03',
     title: 'Tools & Databases',
-    list: 'Git, Github, Webpack, Canvas, Firebase, MongoDB, Strapi, Photoshop, Unity',
+    list: 'Git, Github, Webpack, npm, Canvas, Cypress, Jest, Axios, MongoDB, PostgreSQL, GraphQL, Firebase, Docker, Photoshop, Unity',
     color: 'border-yellow'
 }];
 
@@ -42,7 +42,7 @@ const MySkills = () => {
                     </h2>
                     <LineGradient width="w-1/3" />
                     <p className='mt-10 mb-7'>
-                        I'm always open to learning new technologies and I have completed projects using the following:
+                        Before entering web development, I worked in test prep as a 99th-percentile GRE scorer. Ultimately, I love problem solving, whether it's cracking a probability math question, or implementing a combinatorial algorithm. I'm always open to learning new technologies and I have completed projects using the following:
                     </p>
                 </motion.div>
                 <div className='mt-16 md:mt-0 hidden md:block'>
