@@ -66,7 +66,7 @@ const Landing = () => {
 
                     <div className='relative mt-12 text-center md:text-start z-20'>
                         <p className='text-xl md:text-2xl '>
-                            Web developer seeking full time positions.
+                            Software Engineer
                         </p>
                         <p className='text-base md:text-lg'>
                             Special Interests: Education, Music, Design, Alternative Transportation
