@@ -3,7 +3,7 @@ A portfolio site to present some of my projects.
 
 View the [live deployment](https://tylersernett.github.io/).
 
-<img src="./readme/tsj.png" alt="portfolio screenshot" height="400"/>
+<img src="./readme/tsj.png" alt="portfolio screenshot" style="max-height:400px;"/>
 
 ## How It's Made:
 
