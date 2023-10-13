@@ -1,6 +1,14 @@
 # TSJ Personal Portfolio
 A portfolio site to present some of my projects.
 
+View the [live deployment](https://tylersernett.github.io/).
+
+<img src="./readme/tsj.png" alt="portfolio screenshot" height="400"/>
+
+## How It's Made:
+
+**Tech used:** React ⬩ Tailwind ⬩ Framer Motion (animations) ⬩ Formik ⬩ Yup
+
 ## Notes: handleScroll
 Issue: getting the navbar text and nav dots to dynamically respond to scrolling.
 
