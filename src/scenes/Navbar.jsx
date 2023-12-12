@@ -2,7 +2,7 @@ import { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
 import ReactModal from 'react-modal';
-import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
+// import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 
 ReactModal.setAppElement('body');
 
@@ -70,10 +70,14 @@ const Navbar = ({ isTopOfPage, selectedPage, navPages }) => {
                     shouldCloseOnOverlayClick={true}
                     
                     onAfterOpen={() => {
-                        disableBodyScroll(document.body)
+                        // disableBodyScroll(document.body)
+                        document.body.style.overflow = 'hidden';
+
                     }}
                     onAfterClose={() => {
-                        enableBodyScroll(document.body)
+                        // enableBodyScroll(document.body)
+                        document.body.style.overflow = 'visible';
+
                     }}
                 >
                     <div className='fixed right-0 bottom-0 h-full bg-red w-[300px]'>
